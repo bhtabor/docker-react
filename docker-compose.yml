@@ -1,0 +1,10 @@
+version: '3'
+services:
+  test:
+    profiles: ["cli-only"]
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    volumes:
+      - /app/node_modules
+      - .:/app
